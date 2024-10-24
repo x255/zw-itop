@@ -5,7 +5,7 @@
 	<classes>
 		<class id="Vehicle" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -96,7 +96,7 @@
 		</class>
 		<class id="SplicingMachine" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -170,7 +170,7 @@
 		</class>
 		<class id="OTDR" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -244,7 +244,7 @@
 		</class>
 		<class id="FloodLightsWithInverter" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -308,7 +308,7 @@
 		</class>
 		<class id="SplicingMachine" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -382,7 +382,7 @@
 		</class>
 		<class id="Fluke" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -450,7 +450,7 @@
 		</class>
 		<class id="PowerMeter" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -522,7 +522,7 @@
 		</class>
 		<class id="FiberInspectionProbe" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -590,7 +590,7 @@
 		</class>
 		<class id="VFL" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -658,7 +658,7 @@
 		</class>
 		<class id="PickAndShovel" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -726,7 +726,7 @@
 		</class>
 		<class id="Cleaver" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
@@ -794,7 +794,7 @@
 		</class>
 		<class id="Keys" _delta="define">
 			<parent>
-				FunctionalCI
+				PhysicalDevice
 			</parent>
 			<properties>
 				<category>
