@@ -1,0 +1,16 @@
+{
+  "config": {
+    "classmap-authoritative": true
+  },
+  "autoload": {
+    "psr-4": {
+      "liquidzimbabwe\\iTop\\Extension\\": "src"
+    }
+  },
+  "name": "liquidzimbabwe/itop-sd-extension",
+  "type": "itop-extension",
+  "description": "SD iTop Extension",
+  "require": {
+    "composer-runtime-api": "^2.0"
+  }
+}
