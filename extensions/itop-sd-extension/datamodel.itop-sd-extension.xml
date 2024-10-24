@@ -1,15 +1,862 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6">
-  <constants>
-  </constants>
-  <classes>
-  </classes>
-  <menus>
-  </menus>
-  <user_rights>
-    <groups>
-    </groups>
-    <profiles>
-    </profiles>
-  </user_rights>
+	<constants>
+	</constants>
+	<classes>
+		<class id="Vehicle" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					vehicle
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="vehicle_reg" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/vehicle.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="vehicle_reg" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="vehicle_reg" xsi:type="AttributeString" />
+				<field id="fuel_card_no" xsi:type="AttributeString" />
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+				<field id="purchase_year" xsi:type="AttributeDate" />
+				<field id="parking_location" xsi:type="AttributeString" />
+				<field id="section" xsi:type="AttributeString" />
+				<field id="status" xsi:type="AttributeEnum">
+					<values>
+						<value id="active">
+							Active
+						</value>
+						<value id="inactive">
+							Inactive
+						</value>
+					</values>
+				</field>
+				<field id="comment" xsi:type="AttributeText" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="vehicle_reg" rank="10" />
+						<item id="fuel_card_no" rank="20" />
+						<item id="vendor" rank="30" />
+						<item id="model" rank="40" />
+						<item id="purchase_year" rank="50" />
+						<item id="parking_location" rank="60" />
+						<item id="section" rank="70" />
+						<item id="status" rank="80" />
+						<item id="comment" rank="90" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="vehicle_reg" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+						<item id="status" rank="40" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="vehicle_reg" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+						<item id="status" rank="40" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="SplicingMachine" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					splicing_machine
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/splicing_machine.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="serial_number" xsi:type="AttributeString" />
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+				<field id="first_used_date" xsi:type="AttributeDate" />
+				<field id="location" xsi:type="AttributeString" />
+				<field id="comments" xsi:type="AttributeText" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+						<item id="first_used_date" rank="40" />
+						<item id="location" rank="50" />
+						<item id="comments" rank="60" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="OTDR" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					otdr
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/otdr.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="serial_number" xsi:type="AttributeString" />
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+				<field id="first_used_date" xsi:type="AttributeDate" />
+				<field id="location" xsi:type="AttributeString" />
+				<field id="comment" xsi:type="AttributeText" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+						<item id="first_used_date" rank="40" />
+						<item id="location" rank="50" />
+						<item id="comment" rank="60" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="FloodLightsWithInverter" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					flood_lights_with_inverter
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="vendor" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/flood_lights_with_inverter.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="vendor" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="vendor" rank="10" />
+						<item id="model" rank="20" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="vendor" rank="10" />
+						<item id="model" rank="20" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="vendor" rank="10" />
+						<item id="model" rank="20" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="SplicingMachine" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					splicing_machine
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/splicing_machine.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="serial_number" xsi:type="AttributeString" />
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+				<field id="first_used_date" xsi:type="AttributeDate" />
+				<field id="location" xsi:type="AttributeString" />
+				<field id="comments" xsi:type="AttributeText" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+						<item id="first_used_date" rank="40" />
+						<item id="location" rank="50" />
+						<item id="comments" rank="60" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="Fluke" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					fluke
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/fluke.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="serial_number" xsi:type="AttributeString" />
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="PowerMeter" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					power_meter
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="power_meter_serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/power_meter.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="power_meter_serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="power_meter_serial_number" xsi:type="AttributeString" />
+				<field id="power_meter_vendor" xsi:type="AttributeString" />
+				<field id="light_source_serial_number" xsi:type="AttributeString" />
+				<field id="light_source_vendor" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="power_meter_serial_number" rank="10" />
+						<item id="power_meter_vendor" rank="20" />
+						<item id="light_source_serial_number" rank="30" />
+						<item id="light_source_vendor" rank="40" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="power_meter_serial_number" rank="10" />
+						<item id="power_meter_vendor" rank="20" />
+						<item id="light_source_serial_number" rank="30" />
+						<item id="light_source_vendor" rank="40" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="power_meter_serial_number" rank="10" />
+						<item id="power_meter_vendor" rank="20" />
+						<item id="light_source_serial_number" rank="30" />
+						<item id="light_source_vendor" rank="40" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="FiberInspectionProbe" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					fiber_inspection_probe
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/fiber_inspection_probe.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="serial_number" xsi:type="AttributeString" />
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="VFL" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					vfl
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/vfl.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="serial_number" xsi:type="AttributeString" />
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="serial_number" rank="10" />
+						<item id="vendor" rank="20" />
+						<item id="model" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="PickAndShovel" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					pick_and_shovel
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="pick" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/pick_and_shovel.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="pick" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="pick" xsi:type="AttributeString" />
+				<field id="shovel" xsi:type="AttributeString" />
+				<field id="slasher" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="pick" rank="10" />
+						<item id="shovel" rank="20" />
+						<item id="slasher" rank="30" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="pick" rank="10" />
+						<item id="shovel" rank="20" />
+						<item id="slasher" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="pick" rank="10" />
+						<item id="shovel" rank="20" />
+						<item id="slasher" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="Cleaver" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					cleaver
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/cleaver.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="serial_number" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="vendor" xsi:type="AttributeString" />
+				<field id="model" xsi:type="AttributeString" />
+				<field id="serial_number" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="vendor" rank="10" />
+						<item id="model" rank="20" />
+						<item id="serial_number" rank="30" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="vendor" rank="10" />
+						<item id="model" rank="20" />
+						<item id="serial_number" rank="30" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="vendor" rank="10" />
+						<item id="model" rank="20" />
+						<item id="serial_number" rank="30" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+		<class id="Keys" _delta="define">
+			<parent>
+				PhysicalDevice
+			</parent>
+			<properties>
+				<category>
+					bizmodel,searchable
+				</category>
+				<abstract>
+					false
+				</abstract>
+				<key_type>
+					autoincrement
+				</key_type>
+				<db_table>
+					keys
+				</db_table>
+				<db_key_field>
+					id
+				</db_key_field>
+				<db_final_class_field />
+				<naming>
+					<format>
+						%1$s
+					</format>
+					<attributes>
+						<attribute id="current_electronic_serial" />
+					</attributes>
+				</naming>
+				<display_template />
+				<icon>
+					images/keys.png
+				</icon>
+				<reconciliation>
+					<attributes>
+						<attribute id="current_electronic_serial" />
+					</attributes>
+				</reconciliation>
+			</properties>
+			<fields>
+				<field id="current_electronic_serial" xsi:type="AttributeString" />
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="current_electronic_serial" rank="10" />
+					</items>
+				</details>
+				<search>
+					<items>
+						<item id="current_electronic_serial" rank="10" />
+					</items>
+				</search>
+				<list>
+					<items>
+						<item id="current_electronic_serial" rank="10" />
+					</items>
+				</list>
+			</presentation>
+		</class>
+	</classes>
+	<menus>
+	</menus>
+	<user_rights>
+		<groups>
+		</groups>
+	</user_rights>
 </itop_design>
