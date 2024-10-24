@@ -1,0 +1,288 @@
+2024-10-23 10:21:51 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 10:21:52 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 10:22:05 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 10:22:06 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 10:22:46 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 10:22:47 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 10:22:53 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 10:22:53 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 10:23:03 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 10:23:04 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 10:23:42 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 10:23:42 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 10:23:48 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 10:23:49 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 11:00:07 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 11:00:07 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
+2024-10-23 11:00:28 | Info    | 2     | No result for the single row query | cmdbsource |||
+array (
+  'class' => 'Contact',
+  'key' => 3,
+  'sql_query' => 'SELECT
+ DISTINCT `Contact`.`id` AS `Contactid`,
+ `Contact`.`name` AS `Contactname`,
+ `Contact`.`status` AS `Contactstatus`,
+ `Contact`.`org_id` AS `Contactorg_id`,
+ `Organization_org_id`.`name` AS `Contactorg_name`,
+ `Contact`.`email` AS `Contactemail`,
+ `Contact`.`phone` AS `Contactphone`,
+ `Contact`.`notify` AS `Contactnotify`,
+ `Contact`.`function` AS `Contactfunction`,
+ `Contact`.`finalclass` AS `Contactfinalclass`,
+ IF((`Contact`.`finalclass` IN (\'Team\', \'Contact\')), CAST(CONCAT(COALESCE(`Contact`.`name`, \'\')) AS CHAR), CAST(CONCAT(COALESCE(`Contact_poly_Person`.`first_name`, \'\'), COALESCE(\' \', \'\'), COALESCE(`Contact`.`name`, \'\')) AS CHAR)) AS `Contactfriendlyname`,
+ COALESCE((`Contact`.`status` = \'inactive\'), 0) AS `Contactobsolescence_flag`,
+ `Contact`.`obsolescence_date` AS `Contactobsolescence_date`,
+ CAST(CONCAT(COALESCE(`Organization_org_id`.`name`, \'\')) AS CHAR) AS `Contactorg_id_friendlyname`,
+ COALESCE((`Organization_org_id`.`status` = \'inactive\'), 0) AS `Contactorg_id_obsolescence_flag`
+ FROM 
+   `contact` AS `Contact`
+   INNER JOIN 
+      `organization` AS `Organization_org_id`
+    ON `Contact`.`org_id` = `Organization_org_id`.`id`
+   LEFT JOIN 
+      `person` AS `Contact_poly_Person`
+    ON `Contact`.`id` = `Contact_poly_Person`.`id`
+ WHERE ((`Contact`.`id` = 3) AND 0)
+  ',
+)
+2024-10-23 11:00:28 | Error   | 2     | Error: No result for the single row query. | IssueLog |||
